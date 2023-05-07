@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3030;
 
 let hasilTerakhir; // nampung nilai yang di load selama 1 menit
 
@@ -20,8 +21,12 @@ app.get('/tugas', async (req, res) => {
   }
 });
 
+app.get('/', async (req, res) => {
+  res.send('Hallo kak')
+});
 
-app.listen(4892, () => {
+
+app.listen(PORT, () => {
   console.log('Server started on port 3000');
 });
 
