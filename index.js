@@ -41,8 +41,8 @@ async function Cari_tugas() {
 
   await page.goto('https://elearning.ittelkom-sby.ac.id/login/index.php'); 
 
-  await page.type('input[name="username"]', '1205210024');
-  await page.type('input[name="password"]', 'uzul2003');
+  await page.type('input[name="username"]', 'NIM');
+  await page.type('input[name="password"]', 'PASSWD');
   await Promise.all([
     page.waitForNavigation(),
     page.click('button[type="submit"]')
